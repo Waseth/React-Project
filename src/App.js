@@ -25,19 +25,19 @@ function App() {
         }
         const data = await response.json();
         setPeople(data);
-        setLoading(false); // Set loading to false after data is fetched
+        setLoading(false); 
       } catch (error) {
         console.error('Error fetching data:', error);
 
         setLoading(false);
 
-        setLoading(false); // Ensure loading is set to false even in case of error
+        setLoading(false); 
 
       }
     };
 
-    fetchData(); // Call fetchData immediately when component mounts
-  }, []); // Empty dependency array to ensure this effect runs only once
+    fetchData(); 
+  }, []); 
 
   const handleLikedPerson = (person) => {
     setLikedPeople([...likedPeople, person]);
@@ -51,7 +51,6 @@ function App() {
 
     <Match selectedPeople={likedPeople} onRemove={handleRemovePerson}/>
 
-        {/* Render load-container if loading is true */}
 
         {loading ? (
           <div className='load-container'>LOVETUBE</div>
@@ -68,7 +67,6 @@ function App() {
             <Route path="/peoplelist" element={<PeopleList people={people} onSelect={handleLikedPerson} />} />
 
             <Route path="/peopleitem" element={<PeopleItem />} />
-            {/* Pass people data to PeopleList component */}
             <Route path="/peoplelist" element={<PeopleList people={people} />} />
 
           </Routes>
