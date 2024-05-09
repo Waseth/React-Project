@@ -1,0 +1,36 @@
+body {
+
+  background-color: rgba(224, 173, 207, 0.438);
+
+  
+
+}
+.load-container {
+  font-size: 50px;
+  text-align: center;
+  color: pink;
+  margin-top: 50vh;
+  transform: translateY(-50%);
+  animation: shine 1s ease-in-out infinite alternate, move 2s ease-in-out infinite;
+}
+
+@keyframes shine {
+  from {
+    text-shadow: none;
+  }
+  to {
+    text-shadow: 0 0 10px rgb(211, 119, 134), 0 0 20px rgb(216, 111, 128), 0 0 30px pink, 0 0 40px pink, 0 0 50px pink, 0 0 60px pink, 0 0 70px pink, 0 0 80px pink, 0 0 90px pink;
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translate(-20px, -20px);
+  }
+  50% {
+    transform: translate(20px, 20px);
+  }
+  100% {
+    transform: translate(-20px, -20px);
+  }
+}
