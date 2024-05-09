@@ -196,4 +196,3 @@ function PeopleList({ people,onSelect }) {
 };
 
 export default PeopleList;
-

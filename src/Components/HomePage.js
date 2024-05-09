@@ -1,11 +1,11 @@
 import React from 'react';
 import "./HomePage.css";
-import luv from "../Assets/luv.jpg";
+import berries from "../Assets/berries.png";
 import { Link } from 'react-router-dom';
 
 function HomePage() {
     const backgroundImageStyle = {
-        backgroundImage: `url(${luv})`,
+        backgroundImage: `url(${berries}`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         height: '100vh', 
